@@ -2,7 +2,7 @@
 
 / {
     chosen {
-        zmk,kscan0 = &default_kscan;
+        zmk,kscan0 = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
 
