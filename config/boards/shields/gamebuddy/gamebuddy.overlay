@@ -2,21 +2,14 @@
 
 / {
     chosen {
-        zmk,physical-layout = &default_layout;
+        zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
     };
 
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
-
-    kscan0: kscan0 {
+    default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+        label = "default_kscan";
         diode-direction = "col2row";
-        wakeup-source;
 
         col-gpios
             = <&pro_micro 16 GPIO_ACTIVE_HIGH>
@@ -39,8 +32,9 @@
 
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
-        columns = <7>; // Length of the "col-gpios" array
-        rows = <5>; // Length of the "row-gpios" array
+        columns = <7>;
+        rows = <5>;
+
         map = <
         //   Key 1 | Key 2 | Key 3 | Key 4 | Key 5 | Key 6
             RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
