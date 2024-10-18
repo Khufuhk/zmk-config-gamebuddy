@@ -18,38 +18,46 @@
 
         combos {
             compatible = "zmk,combos";
-            combo_BTselect1
+            combo_BTselect1 {
                 timeout-ms = <50>;
                 key-positions = <25 26 1>;
                 bindings = <&bt BT_SEL 0>;
-            combo_BTselect2
+            }
+            combo_BTselect2 {
                 timeout-ms = <50>;
                 key-positions = <25 26 2>;
                 bindings = <&bt BT_SEL 1>;
-            combo_BTselect3
+            }
+            combo_BTselect3 {
                 timeout-ms = <50>;
                 key-positions = <25 26 3>;
                 bindings = <&bt BT_SEL 2>;
-            combo_BTselect4
+            }
+            combo_BTselect4 {
                 timeout-ms = <50>;
                 key-positions = <25 26 4>;
                 bindings = <&bt BT_SEL 3>;
-            combo_BTselect5
+            }
+            combo_BTselect5 {
                 timeout-ms = <50>;
                 key-positions = <25 26 5>;
                 bindings = <&bt BT_SEL 4>;
-            combo_BTclear
+            }
+            combo_BTclear {
                 timeout-ms = <50>;
                 key-positions = <25 26 27>;
                 bindings = <&bt BT_CLR>;
-            combo_Power
+            }
+            combo_Power {
                 timeout-ms = <50>;
                 key-positions = <25 26 19>;
                 bindings = <&kp K_PWR>;
-            combo_Sleep
+            }
+            combo_Sleep {
                 timeout-ms = <50>;
                 key-positions = <25 26 20>;
                 bindings = <&kp K_SLEEP>;
+            }
         };
     };
  };
