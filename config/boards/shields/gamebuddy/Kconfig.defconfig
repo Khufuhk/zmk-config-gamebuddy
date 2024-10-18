@@ -1,0 +1,6 @@
+if SHIELD_GAMEBUDDY
+            
+config ZMK_KEYBOARD_NAME
+    default "gamebuddy"
+
+endif
