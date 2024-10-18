@@ -1,0 +1,55 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            bindings = <
+                &kp ESC       &kp F9    &kp 1    &kp 2    &kp 3    &kp G
+                &kp F10       &kp TAB   &kp Q    &kp W    &kp E    &kp R
+                &kp LSHIFT    &kp E     &kp A    &kp S    &kp D    &kp F
+                &kp LCTRL     &kp M     &kp Z    &kp X    &kp C    &kp V
+                                                          &kp T    &kp LALT    &kp SPACE
+            >;
+        };
+
+        combos {
+            compatible = "zmk,combos";
+            combo_BTselect1
+                timeout-ms = <50>;
+                key-positions = <25 26 1>;
+                bindings = <&bt BT_SEL 0>;
+            combo_BTselect2
+                timeout-ms = <50>;
+                key-positions = <25 26 2>;
+                bindings = <&bt BT_SEL 1>;
+            combo_BTselect3
+                timeout-ms = <50>;
+                key-positions = <25 26 3>;
+                bindings = <&bt BT_SEL 2>;
+            combo_BTselect4
+                timeout-ms = <50>;
+                key-positions = <25 26 4>;
+                bindings = <&bt BT_SEL 3>;
+            combo_BTselect5
+                timeout-ms = <50>;
+                key-positions = <25 26 5>;
+                bindings = <&bt BT_SEL 4>;
+            combo_BTclear
+                timeout-ms = <50>;
+                key-positions = <25 26 27>;
+                bindings = <&bt BT_CLR>;
+            combo_Power
+                timeout-ms = <50>;
+                key-positions = <25 26 19>;
+                bindings = <&kp K_PWR>;
+            combo_Sleep
+                timeout-ms = <50>;
+                key-positions = <25 26 20>;
+                bindings = <&kp K_SLEEP>;
+        };
+    };
+ };
