@@ -30,7 +30,7 @@
             };
             combo_BTclear {
                 timeout-ms = <500>;
-                key-positions = <&bt BT_CLR>>;
+                key-positions = <&bt BT_CLR>;
                 bindings = <26 6>;
             };
         };
