@@ -3,6 +3,27 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_BTselect1 {
+            timeout-ms = <50>;
+            key-positions = <25 2>;
+            bindings = <&bt BT_SEL 0>;
+        };
+        combo_BTselect2 {
+            timeout-ms = <50>;
+            key-positions = <25 3>;
+            bindings = <&bt BT_SEL 1>;
+        };
+        combo_BTclear {
+            timeout-ms = <50>;
+            key-positions = <25 5>;
+            bindings = <&bt BT_CLR>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -14,25 +35,6 @@
                 &kp LCTRL     &kp M     &kp Z    &kp X    &kp C    &kp V
                                                           &kp T    &kp LALT    &kp SPACE
             >;
-        };
-
-        combos {
-            compatible = "zmk,combos";
-            combo_BTselect1 {
-                timeout-ms = <50>;
-                key-positions = <25 2>;
-                bindings = <&bt BT_SEL 0>;
-            };
-            combo_BTselect2 {
-                timeout-ms = <50>;
-                key-positions = <25 3>;
-                bindings = <&bt BT_SEL 1>;
-            };
-            combo_BTclear {
-                timeout-ms = <500>;
-                key-positions = <25 5>;
-                bindings = <&bt BT_CLR>;
-            };
         };
     };
  };
