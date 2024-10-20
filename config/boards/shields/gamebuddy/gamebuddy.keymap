@@ -11,7 +11,7 @@
 
         default_layer { // Layer 0
             bindings = <
-                &kp ESC     &kp F9    &kp 1    &kp 2    &kp 3    &kp G
+                &kp ESC     &kp F9    &kp N1   &kp N2   &kp N3   &kp G
                 &kp F10     &kp TAB   &kp Q    &kp W    &kp E    &kp R
                 &kp LSHIFT  &kp E     &kp A    &kp S    &kp D    &kp F
                 &kp LCTRL   &kp M     &kp Z    &kp X    &kp C    &kp V
@@ -20,11 +20,11 @@
         };
         secondary { //Layer 1
             bindings = <
-                &trans    &trans        &trans        &trans        &trans    &trans
+                &trans    &trans        &trans        &trans        &trans    &bt BLE_CLR_ALL
                 &trans    &kp ESC       &kp F1        &kp F2        &kp F3    &kp F4
                 &trans    &trans        &kp F5        &kp F6        &kp F7    &kp F8
                 &trans    &bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans    &trans
-                                                      &out OUT_TOG  &trans    &bt BT_CLR
+                                                      &out OUT_USB  &trans    &out OUT_BLE
             >;
         };
     };
