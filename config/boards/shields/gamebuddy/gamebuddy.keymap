@@ -3,37 +3,26 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_BTselect1 {
-            timeout-ms = <50>;
-            key-positions = <25 2>;
-            bindings = <&bt BT_SEL 0>;
-        };
-        combo_BTselect2 {
-            timeout-ms = <50>;
-            key-positions = <25 3>;
-            bindings = <&bt BT_SEL 1>;
-        };
-        combo_BTclear {
-            timeout-ms = <50>;
-            key-positions = <25 5>;
-            bindings = <&bt BT_CLR>;
-        };
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
             bindings = <
-                &kp ESC       &kp F9    &kp 1    &kp 2    &kp 3    &kp G
-                &kp F10       &kp TAB   &kp Q    &kp W    &kp E    &kp R
-                &kp LSHIFT    &kp E     &kp A    &kp S    &kp D    &kp F
-                &kp LCTRL     &kp M     &kp Z    &kp X    &kp C    &kp V
-                                                          &kp T    &kp LALT    &kp SPACE
+                &kp ESC     &kp F9    &kp 1    &kp 2    &kp 3    &kp G
+                &kp F10     &kp TAB   &kp Q    &kp W    &kp E    &kp R
+                &kp LSHIFT  &kp E     &kp A    &kp S    &kp D    &kp F
+                &kp LCTRL   &kp M     &kp Z    &kp X    &kp C    &kp V
+                                                        &kp T    &lt TWO LALT &kp SPACE
+            >;
+        };
+        TWO { //Layer 1
+            display-name = "Bluetooth"
+            bindings = <
+                &trans    &trans        &trans        &trans        &trans    &trans
+                &trans    &kp ESC       &kp F1        &kp F2        &kp F3    &kp F4
+                &trans    &trans        &kp F5        &kp F6        &kp F7    &kp F8
+                &trans    &kp BT_SEL 0  &kp BT_SEL 1  &trans        &trans    &trans
+                                                      &out OUT_TOG  &trans    &kp BT_CLR
             >;
         };
     };
