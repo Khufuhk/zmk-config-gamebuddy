@@ -13,7 +13,7 @@
                 &kp F10     &kp TAB   &kp Q    &kp W    &kp E    &kp R
                 &kp LSHIFT  &kp E     &kp A    &kp S    &kp D    &kp F
                 &kp LCTRL   &kp M     &kp Z    &kp X    &kp C    &kp V
-                                                        &kp T    &lt secondary LALT &kp SPACE
+                                                        &kp T    &lt 1 LALT &kp SPACE
             >;
         };
         secondary {
