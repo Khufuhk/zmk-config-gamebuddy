@@ -1,2 +1,2 @@
 config SHIELD_GAMEBUDDY
-    def_bool $(shields_list_contains, gamebuddy)
+    def_bool $(shields_list_contains,gamebuddy)
